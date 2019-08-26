@@ -23,4 +23,15 @@ do
 	i=$[$i+1]
 done
 
+echo "completing file format"
+echo " ]" >> keating.json
+echo " }" >> keating.json
+echo "}"  >> keating.json
+
+
+echo "removing last comma hack"
+#remove comma from the last host instance (cheap and fast method - and unexplainable :)
+sed -i '$x;$G;/\(.*\),/!H;//!{$!d};  $!x;$s//\1/;s/^\n//' keating.json
+
+
 

@@ -175,6 +175,5 @@
         "ems_ref": "domain-c26",
         "v_parent_datacenter": "V2V-DC"
       }
-    ]
-  }
-}
+    ],
+    "ems_hosts": [
