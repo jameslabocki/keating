@@ -31,31 +31,31 @@ do
 	sed -e "s/IDENTIFIER/$i/" \
 	    -e "s/SHORTNAME/host-$i/"  \
 	    -e "s/VMID1/$a/" \
-	    -e "s/VMNAME1/virtual-$a/" \
+	    -e "s/VMNAME1/nyc-db-$a/" \
 	    -e "s/VMEMS1/vm-$a/" \
 	    -e "s/VMID2/$b/" \
-	    -e "s/VMNAME2/virtual-$b/" \
+	    -e "s/VMNAME2/nyc-app-$b/" \
 	    -e "s/VMEMS2/vm-$b/" \
 	    -e "s/VMID3/$c/" \
-	    -e "s/VMNAME3/virtual-$c/" \
+	    -e "s/VMNAME3/bos-wblg-$c/" \
 	    -e "s/VMEMS3/vm-$c/" \
 	    -e "s/VMID4/$d/" \
-	    -e "s/VMNAME4/virtual-$d/" \
+	    -e "s/VMNAME4/bos-was-$d/" \
 	    -e "s/VMEMS4/vm-$d/" \
 	    -e "s/VMID5/$e/" \
-	    -e "s/VMNAME5/virtual-$e/" \
+	    -e "s/VMNAME5/den-jbapp-$e/" \
 	    -e "s/VMEMS5/vm-$e/" \
 	    -e "s/VMID6/$f/" \
-	    -e "s/VMNAME6/virtual-$f/" \
+	    -e "s/VMNAME6/web-$f/" \
 	    -e "s/VMEMS6/vm-$f/" \
 	    -e "s/VMID7/$g/" \
-	    -e "s/VMNAME7/virtual-$g/" \
+	    -e "s/VMNAME7/proto-$g/" \
 	    -e "s/VMEMS7/vm-$g/" \
 	    -e "s/VMID8/$h/" \
-	    -e "s/VMNAME8/virtual-$h/" \
+	    -e "s/VMNAME8/fileprint-$h/" \
 	    -e "s/VMEMS8/vm-$h/" \
 	    -e "s/VMID9/$j/" \
-	    -e "s/VMNAME9/virtual-$j/" \
+	    -e "s/VMNAME9/infra-$j/" \
 	    -e "s/VMEMS9/vm-$j/" \
             -e "s/FQDN/host-$i.example.com/g" hosttemplate.json >> keating.json
 	i=$[$i+1]

@@ -1769,7 +1769,7 @@
       "orphaned": false,
       "retired": null,
       "num_cpu": 1,
-      "has_rdm_disk": false,
+      "has_rdm_disk": true,
       "host_id": 1,
       "power_state": "off",
       "ipaddresses": [],
@@ -1842,7 +1842,34 @@
           },
           {
             "id": 32,
+            "device_name": "Network adapter 5",
+            "device_type": "ethernet",
+            "address": "00:50:56:a5:98:7a",
+            "model": "VirtualVmxnet3",
+            "uid_ems": "00:50:56:a5:98:7a",
+            "network": null
+          },
+          {
+            "id": 31,
             "device_name": "Network adapter 1",
+            "device_type": "ethernet",
+            "address": "00:50:56:a5:98:7a",
+            "model": "VirtualVmxnet3",
+            "uid_ems": "00:50:56:a5:98:7a",
+            "network": null
+          },
+          {
+            "id": 37,
+            "device_name": "Network adapter 3",
+            "device_type": "ethernet",
+            "address": "00:50:56:a5:98:7a",
+            "model": "VirtualVmxnet3",
+            "uid_ems": "00:50:56:a5:98:7a",
+            "network": null
+          },
+	  {
+            "id": 35,
+            "device_name": "Network adapter 4",
             "device_type": "ethernet",
             "address": "00:50:56:a5:98:7a",
             "model": "VirtualVmxnet3",
