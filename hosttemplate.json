@@ -74,13 +74,13 @@
       "ram_size_in_bytes": 2147483648,
       "v_datastore_path": "datastore13/james-db-03-copy/james-db-03-copy.vmx",
       "operating_system": {
-        "product_type": "Linux",
-        "product_name": "Red Hat Enterprise Linux Server release 7.4 (Maipo)",
-        "distribution": "redhat"
+        "product_type": "ServerNT",
+        "product_name": "Microsoft Windows Server 2016 (64-bit)",
+        "distribution": "null"
       },
       "hardware": {
         "id": 7,
-        "guest_os_full_name": "CentOS 7 (64-bit)",
+        "guest_os_full_name": "Microsoft Windows Server 2016 (64-bit)",
         "disks": [
           {
             "id": 9,
@@ -106,12 +106,23 @@
           }
         ]
       },
-      "files": [],
+      "files": [
+          {
+             "contents": null,
+             "id": 10000000000057,
+             "name": "C:\\Program Files\\Microsoft SQL Server"
+          },
+          {
+             "contents": null,
+             "id": 10000000000056,
+             "name": "C:\\Program Files\\Microsoft SQL Server"
+          }
+      ],
       "system_services": [
         {
-          "id": 9669,
-          "name": "rhnsd",
-          "typename": "linux_initprocess"
+          "id": 10000000000686,
+          "name": "SQLSERVERAGENT",
+          "typename": "win32_service"
         },
         {
           "id": 9668,
@@ -1042,6 +1053,11 @@
         }
       ],
       "system_services": [
+	{
+	  "id": 10000000001080,
+	  "name": "sapinit",
+	  "typename": "linux_initprocess",
+	}
         {
           "id": 11306,
           "name": "rhnsd",
@@ -1973,6 +1989,11 @@
         }
       ],
       "system_services": [
+	{
+	  "id": 29853,
+	  "name": "weblogic_nodemanager",
+	  "typename": "linux_initprocess",
+	}
         {
           "id": 12229,
           "name": "rhnsd",
@@ -2046,6 +2067,11 @@
       },
       "files": [],
       "system_services": [
+        {
+          "id": 9182304,
+          "name": "nodeagent_was.init",
+          "typename": "linux_initprocess"
+        },
         {
           "id": 8252,
           "name": "rhnsd",
@@ -2823,6 +2849,11 @@
       },
       "files": [],
       "system_services": [
+        {
+          "id": 120391204,
+          "name": "eap7-standalone",
+          "typename": "linux_initprocess"
+        },
         {
           "id": 9809,
           "name": "rhnsd",
@@ -5739,6 +5770,11 @@
       },
       "files": [],
       "system_services": [
+	{
+	  "id": 9843,
+	  "name": "tomcat",
+	  "typename": "linux_initprocess"
+	}
         {
           "id": 4081,
           "name": "rhnsd",

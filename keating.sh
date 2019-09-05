@@ -72,4 +72,6 @@ echo "removing last comma hack"
 sed -i '$x;$G;/\(.*\),/!H;//!{$!d};  $!x;$s//\1/;s/^\n//' keating.json
 
 
-
+echo "compressing"
+tar -cvf keating.tar keating.json
+gzip keating.tar
