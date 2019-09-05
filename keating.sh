@@ -52,7 +52,7 @@ do
 	    -e "s/VMNAME7/proto-$g/" \
 	    -e "s/VMEMS7/vm-$g/" \
 	    -e "s/VMID8/$h/" \
-	    -e "s/VMNAME8/fileprint-$h/" \
+	    -e "s/VMNAME8/webapp-$h/" \
 	    -e "s/VMEMS8/vm-$h/" \
 	    -e "s/VMID9/$j/" \
 	    -e "s/VMNAME9/infra-$j/" \
