@@ -8,8 +8,12 @@ die () {
     exit 1
 }
 
+echo "$#"
+
 #exit if no arguemts are given
-[ "$#" -eq 1 ] || die "./keating.sh [Number of Hosts]"
+if (( $# < 1 )); then
+	die "./keating.sh [Number of Hosts] [Optional: Number of CPUs]"
+fi
 
 i=0
 
@@ -65,6 +69,12 @@ echo "completing file format"
 echo " ]" >> keating.json
 echo " }" >> keating.json
 echo "}"  >> keating.json
+
+
+if (( $# > 1 )); then
+	echo "editing cpu data"
+	sed -i -e 's/"cpu_total_cores": 4,/"cpu_total_cores": '"$2"',/g' keating.json
+fi
 
 
 echo "removing last comma hack"
