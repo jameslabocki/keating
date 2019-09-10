@@ -73,5 +73,4 @@ sed -i '$x;$G;/\(.*\),/!H;//!{$!d};  $!x;$s//\1/;s/^\n//' keating.json
 
 
 echo "compressing"
-tar -cvf keating.tar keating.json
-gzip keating.tar
+tar -zcvf keating-$(date '+%Y%m%d_%H%M')-$1.tar.gz keating.json
