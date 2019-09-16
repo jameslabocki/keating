@@ -1056,8 +1056,8 @@
 	{
 	  "id": 10000000001080,
 	  "name": "sapinit",
-	  "typename": "linux_initprocess",
-	}
+	  "typename": "linux_initprocess"
+	},
         {
           "id": 11306,
           "name": "rhnsd",
@@ -2019,8 +2019,8 @@
 	{
 	  "id": 29853,
 	  "name": "weblogic_nodemanager",
-	  "typename": "linux_initprocess",
-	}
+	  "typename": "linux_initprocess"
+	},
         {
           "id": 12229,
           "name": "rhnsd",
@@ -5801,7 +5801,7 @@
 	  "id": 9843,
 	  "name": "tomcat",
 	  "typename": "linux_initprocess"
-	}
+	},
         {
           "id": 4081,
           "name": "rhnsd",
@@ -6571,6 +6571,11 @@
       },
       "files": [],
       "system_services": [
+        {
+          "id": 29853,
+          "name": "weblogic_nodemanager",
+          "typename": "linux_initprocess"
+        },
         {
           "id": 4222,
           "name": "rhnsd",

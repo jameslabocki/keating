@@ -15,13 +15,14 @@ if (( $# < 1 )); then
 	die "./keating.sh [Number of Hosts] [Optional: Number of CPUs]"
 fi
 
-i=0
+i=1
 
 echo "copying mastertemplate.json to keating.json"
 cp mastertemplate.json keating.json
 
 while [ $i -lt $1 ]; 
 do 
+	random=$((1 + RANDOM % 3))
 	a="${i}1"
 	b="${i}2"
 	c="${i}3"
@@ -35,19 +36,19 @@ do
 	sed -e "s/IDENTIFIER/$i/" \
 	    -e "s/SHORTNAME/host-$i/"  \
 	    -e "s/VMID1/$a/" \
-	    -e "s/VMNAME1/nyc-db-$a/" \
+	    -e "s/VMNAME1/analytics-$a/" \
 	    -e "s/VMEMS1/vm-$a/" \
 	    -e "s/VMID2/$b/" \
-	    -e "s/VMNAME2/nyc-app-$b/" \
+	    -e "s/VMNAME2/nyc-$random-$b/" \
 	    -e "s/VMEMS2/vm-$b/" \
 	    -e "s/VMID3/$c/" \
-	    -e "s/VMNAME3/bos-wblg-$c/" \
+	    -e "s/VMNAME3/bos--$c/" \
 	    -e "s/VMEMS3/vm-$c/" \
 	    -e "s/VMID4/$d/" \
-	    -e "s/VMNAME4/bos-was-$d/" \
+	    -e "s/VMNAME4/bos-$random-$d/" \
 	    -e "s/VMEMS4/vm-$d/" \
 	    -e "s/VMID5/$e/" \
-	    -e "s/VMNAME5/den-jbapp-$e/" \
+	    -e "s/VMNAME5/den-$e/" \
 	    -e "s/VMEMS5/vm-$e/" \
 	    -e "s/VMID6/$f/" \
 	    -e "s/VMNAME6/web-$f/" \
@@ -56,12 +57,12 @@ do
 	    -e "s/VMNAME7/proto-$g/" \
 	    -e "s/VMEMS7/vm-$g/" \
 	    -e "s/VMID8/$h/" \
-	    -e "s/VMNAME8/webapp-$h/" \
+	    -e "s/VMNAME8/webapp-$random-$h/" \
 	    -e "s/VMEMS8/vm-$h/" \
 	    -e "s/VMID9/$j/" \
 	    -e "s/VMNAME9/infra-$j/" \
 	    -e "s/VMEMS9/vm-$j/" \
-            -e "s/FQDN/host-$i.example.com/g" hosttemplate.json >> keating.json
+            -e "s/FQDN/host-$i.example.com/g" hosttemplate${random}.json >> keating.json
 	i=$[$i+1]
 done
 
